@@ -1,16 +1,25 @@
+/* Reset and general styles */
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   text-align: center;
+}
+
+body {
+  font-family: Arial, sans-serif;
   background-color: rgb(206, 244, 242);
 }
+
 h1 {
   background-color: #081b31;
   color: #fff;
-  height: 5 rem;
+  height: 5rem;
   line-height: 5rem;
+  margin-bottom: 2rem;
 }
 
+/* Choice styles */
 .choice {
   height: 165px;
   width: 165px;
@@ -18,24 +27,27 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 2rem;
 }
+
 .choice:hover {
   cursor: pointer;
   background-color: #081b31;
 }
+
 img {
-  height: 150px;
-  width: 150px;
-  object-fit: cover;
+  max-height: 150px;
+  max-width: 150px;
   border-radius: 50%;
 }
 
+/* Container styles */
 .choices {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  gap: 3rem;
-  margin-top: 5rem;
+  gap: 1rem;
+  margin-top: 2rem;
 }
 
 .score-board {
@@ -43,23 +55,43 @@ img {
   justify-content: center;
   align-items: center;
   font-size: 2rem;
-  margin-top: 3rem;
-  gap: 5rem;
+  margin-top: 2rem;
+  gap: 3rem;
 }
 
-#user-score,
-#comp-score {
-  font-size: 4rem;
-}
 .msg-container {
-  margin-top: 5rem;
+  margin-top: 2rem;
 }
 
 #msg {
   background-color: #081b31;
   color: #fff;
   font-size: 2rem;
-  display: inline;
   padding: 1rem;
   border-radius: 1rem;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 600px) {
+  .choice {
+    height: 100px;
+    width: 100px;
+  }
+
+  img {
+    max-height: 80px;
+    max-width: 80px;
+  }
+
+  .choices {
+    margin-top: 1rem;
+  }
+
+  .score-board {
+    font-size: 1.5rem;
+  }
+
+  #msg {
+    font-size: 1.5rem;
+  }
 }
